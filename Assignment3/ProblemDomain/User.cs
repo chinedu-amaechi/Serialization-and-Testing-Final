@@ -1,5 +1,6 @@
 ﻿namespace Assignment3.ProblemDomain
 {
+    [Serializable]
     public class User : IEquatable<User>
     {
         public int Id { get; private set; }
