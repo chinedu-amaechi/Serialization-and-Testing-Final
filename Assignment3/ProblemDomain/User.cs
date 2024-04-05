@@ -29,6 +29,7 @@
         /// </summary>
         /// <param name="input">Inputted password</param>
         /// <returns>True if password is correct</returns>
+
         public bool IsCorrectPassword(string input)
         {
             if (string.IsNullOrEmpty(Password) == string.IsNullOrEmpty(input))
@@ -50,7 +51,7 @@
         public override bool Equals(Object other)
         {
             if (!(other is User otherUser))
-                return false;
+			    return false;
 
             return Id == otherUser.Id && Name.Equals(otherUser.Name) && Email.Equals(otherUser.Email);
         }
