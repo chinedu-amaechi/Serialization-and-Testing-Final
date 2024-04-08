@@ -13,12 +13,13 @@ namespace Assignment3.UnitTests
         public static void SerializeUsers(ILinkedListADT users, string fileName)
         {
             // uncomment once we you have implemented the SLL class
+            
             DataContractSerializer serializer = new DataContractSerializer(typeof(SLL));
             using (FileStream stream = File.Create(fileName))
             {
                 serializer.WriteObject(stream, users);
             }
-
+            
         }
 
         /// <summary>

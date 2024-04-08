@@ -19,6 +19,18 @@ namespace Assignment3.Utility
             head = null;
             size = 0;
         }
+
+        public bool IsEmpty()
+        {
+            return head == null;
+        }
+
+        public void Clear()
+        {
+            head = null;
+            size = 0;
+        }
+
         public void Add(User value, int index)
         {
             if (index < 0 || index > size)
@@ -84,6 +96,10 @@ namespace Assignment3.Utility
         public bool Contains(User value)
         {
             return IndexOf(value) != -1;
+                }
+                current = current.Next;
+            }
+            return false;
         }
 
         public int Count()
@@ -154,6 +170,7 @@ namespace Assignment3.Utility
             }
         }
 
+                
         public void RemoveFirst()
         {
             if (head == null)
@@ -164,6 +181,7 @@ namespace Assignment3.Utility
             head = head.Next;
             size--;
         }
+
 
         public void RemoveLast()
         {
@@ -229,6 +247,7 @@ namespace Assignment3.Utility
         {
             List<User> userList = new List<User>();
             Node current = head;
+            int index = 0;
             while (current != null)
             {
                 userList.Add(current.user);
@@ -239,10 +258,10 @@ namespace Assignment3.Utility
 
             head = null;
             foreach (User user in userList)
-            {
+                {
                 AddLast(user);
             }
-        }
+                }
 
         public User[] ToArray()
         {
