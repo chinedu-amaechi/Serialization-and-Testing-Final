@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Assignment3.Utility
 {
+    [Serializable]
     public class SLL : ILinkedListADT
     {
         private Node head;
